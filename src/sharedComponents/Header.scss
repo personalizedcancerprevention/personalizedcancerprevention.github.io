@@ -1,0 +1,25 @@
+@import "../globalstyle/variables.scss";
+
+.header-container {
+    color: white;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    margin: 8px;
+    // background-color: inherit;
+
+
+    .right-container {
+        margin-left: auto;
+        display: inline-flex;
+        gap: 1rem;
+
+        .ant-btn {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .button-container {
+            font-family: 'Play';
+        }
+    }
+}

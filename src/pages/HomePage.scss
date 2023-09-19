@@ -1,0 +1,58 @@
+@import "../globalstyle/variables.scss";
+
+.homepage-container {
+  padding: 16px 32px;
+  color: white;
+
+  .content-container {
+    margin-top: 2rem;
+    height: 80vh;
+    width: 100%;
+    text-align: center;
+    word-break: break-word;
+
+    h1 {
+      text-align: center;
+      font-family: 'Play';
+      color: #FFF;
+      text-align: center;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+      font-family: Play;
+      font-size: 72px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      margin-bottom: 16px;
+    }
+
+    .hero-container {
+      width: 100%;
+    }
+
+  }
+
+}
+
+@media screen and (max-width: $screen-sm-min) {
+
+  .homepage-container {
+    .header-container {
+      display: inline-block;
+
+      .right-container {
+        display: flex;
+        flex-wrap: wrap;
+      }
+    }
+
+    .content-container {
+      margin-top: 6rem;
+
+      div {
+        font-size: 2rem;
+        line-height: 2.5rem;
+      }
+    }
+  }
+
+}

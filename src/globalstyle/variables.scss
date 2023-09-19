@@ -1,0 +1,184 @@
+// info from ant design
+// Media queries breakpoints
+
+$screen-xs: 480px;
+$screen-xs-min: $screen-xs;
+// 👆 Extra small screen / phone
+
+// 👇 Small screen / tablet
+$screen-sm: 576px;
+$screen-sm-min: $screen-sm;
+
+// Medium screen / desktop
+$screen-md: 768px;
+$screen-md-min: $screen-md;
+
+// Large screen / wide desktop
+$screen-lg: 992px;
+$screen-lg-min: $screen-lg;
+
+// Extra large screen / full hd
+$screen-xl: 1200px;
+$screen-xl-min: $screen-xl;
+
+// Extra extra large screen / large desktop
+$screen-xxl: 1600px;
+$screen-xxl-min: $screen-xxl;
+
+// provide a maximum
+$screen-xs-max: ($screen-sm-min - 1px);
+$screen-sm-max: ($screen-md-min - 1px);
+$screen-md-max: ($screen-lg-min - 1px);
+$screen-lg-max: ($screen-xl-min - 1px);
+$screen-xl-max: ($screen-xxl-min - 1px);
+
+// Primary colors
+$brand-10: #d5e4ff;
+$brand-20: #b5cffd;
+$brand-30: #92b6f5;
+$brand-40: #77a1e9;
+$brand-50: #4b7bd1;
+$brand-60: #2b5cb3;
+$brand-70: #113e90;
+$brand-80: #002569;
+$brand-90: #001641;
+$brand-100: #00091a;
+
+// Black and White
+$black: #000000;
+$white: #ffffff;
+
+// Secondary colors
+// Teal
+$teal-10: #d9fbfb;
+$teal-20: #9ef0f0;
+$teal-30: #3ddbd9;
+$teal-40: #08bdba;
+$teal-50: #009d9a;
+$teal-60: #007d79;
+$teal-70: #005d5d;
+$teal-80: #004144;
+$teal-90: #022b30;
+$teal-100: #081a1c;
+
+// magenta
+$magenta-10: #fff0f7;
+$magenta-20: #ffd6e8;
+$magenta-30: #ffafd2;
+$magenta-40: #ff7eb6;
+$magenta-50: #ee5396;
+$magenta-60: #d02670;
+$magenta-70: #9f1853;
+$magenta-80: #740937;
+$magenta-90: #510224;
+$magenta-100: #2a0a18;
+
+// Orange
+$orange-10: #fff2e8;
+$orange-20: #ffd9be;
+$orange-30: #ffb784;
+$orange-40: #ff832b;
+$orange-50: #eb6200;
+$orange-60: #ba4e00;
+$orange-70: #8a3800;
+$orange-80: #5e2900;
+$orange-90: #3e1a00;
+$orange-100: #231000;
+
+// Purple
+$purple-10: #f6f2ff;
+$purple-20: #e8daff;
+$purple-30: #d4bbff;
+$purple-40: #be95ff;
+$purple-50: #a56eff;
+$purple-60: #8a3ffc;
+$purple-70: #6929c4;
+$purple-80: #491d8b;
+$purple-90: #31135e;
+$purple-100: #1c0f30;
+
+// Alert colors
+// Success Green
+$green-success-10: #defbe6;
+$green-success-20: #a7f0ba;
+$green-success-30: #6fdc8c;
+$green-success-40: #42be65;
+$green-success-50: #24a148;
+$green-success-60: #198038;
+$green-success-70: #0e6027;
+$green-success-80: #044317;
+$green-success-90: #022d0d;
+$green-success-100: #071908;
+
+// Warning Yellow
+$yellow-warning-10: #fcf4d6;
+$yellow-warning-20: #fddc69;
+$yellow-warning-30: #f1c21b;
+$yellow-warning-40: #d2a106;
+$yellow-warning-50: #b28600;
+$yellow-warning-60: #8e6a00;
+$yellow-warning-70: #684e00;
+$yellow-warning-80: #483700;
+$yellow-warning-90: #302400;
+$yellow-warning-100: #1c1500;
+
+// Error Red
+$red-error-10: #fff1f1;
+$red-error-20: #ffd7d9;
+$red-error-30: #ffb3b8;
+$red-error-40: #ff8389;
+$red-error-50: #fa4d56;
+$red-error-60: #da1e28;
+$red-error-70: #a2191f;
+$red-error-80: #750e13;
+$red-error-90: #520408;
+$red-error-100: #2d0709;
+
+// Informational Blue
+$blue-info-10: #e5f6ff;
+$blue-info-20: #bae6ff;
+$blue-info-30: #82cfff;
+$blue-info-40: #33b1ff;
+$blue-info-50: #1192e8;
+$blue-info-60: #0072c3;
+$blue-info-70: #00539a;
+$blue-info-80: #003a6d;
+$blue-info-90: #012749;
+$blue-info-100: #061727;
+
+// Grayscale colors
+$gray-10: #f4f4f4;
+$gray-20: #e0e0e0;
+$gray-30: #c6c6c6;
+$gray-40: #a8a8a8;
+$gray-50: #8d8d8d;
+$gray-60: #6f6f6f;
+$gray-70: #525252;
+$gray-80: #393939;
+$gray-90: #262626;
+$gray-100: #161616;
+
+$cool-gray-10: #f2f4f8;
+$cool-gray-20: #dde1e6;
+$cool-gray-30: #c1c7cd;
+$cool-gray-40: #a2a9b0;
+$cool-gray-50: #878d96;
+$cool-gray-60: #697077;
+$cool-gray-70: #4d5358;
+$cool-gray-80: #343a3f;
+$cool-gray-90: #21272a;
+$cool-gray-100: #121619;
+
+$warm-gray-10: #f7f3f2;
+$warm-gray-20: #e5e0df;
+$warm-gray-30: #cac5c4;
+$warm-gray-40: #ada8a8;
+$warm-gray-50: #8f8b8b;
+$warm-gray-60: #726e6e;
+$warm-gray-70: #565151;
+$warm-gray-80: #3c3838;
+$warm-gray-90: #272525;
+$warm-gray-100: #171414;
+
+//Link Colors
+$blue-link-10: #1810e7;

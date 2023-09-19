@@ -1,0 +1,14 @@
+.idea/
+.vscode/
+node_modules/
+build
+.DS_Store
+
+.npm/
+dist
+dist*
+
+coverage
+coverage/*
+
+.env.local
