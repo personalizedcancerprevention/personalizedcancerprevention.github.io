@@ -89,22 +89,22 @@ module.exports = {
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        // type: "asset/resource",
-        use: [
-          {
-            loader: "file-loader",
-            options: {
-              outputPath: "imgs",
-            },
-          },
-          {
-            loader: "image-webpack-loader",
-            options: {
-              bypassOnDebug: true,
-              disable: true,
-            },
-          },
-        ],
+        type: "asset/resource",
+        // use: [
+        //   {
+        //     loader: "file-loader",
+        //     options: {
+        //       outputPath: "imgs",
+        //     },
+        //   },
+        //   {
+        //     loader: "image-webpack-loader",
+        //     options: {
+        //       bypassOnDebug: true,
+        //       disable: true,
+        //     },
+        //   },
+        // ],
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
