@@ -49,7 +49,7 @@ const Header = () => {
           label: "Patient Programs",
           children: [
             {
-              label: "Risk Assessment",
+              label: "Genetic Risk Assessment",
               key: "GRA",
               onClick: () => {
                 navigate("/risk-accessment");
