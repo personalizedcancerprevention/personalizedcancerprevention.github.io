@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "homepage": "https://gitname.github.io/react-gh-pages",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "webpack serve --mode development --config=webpack.config.dev.js --hot",
     "build": "webpack --mode production --config=webpack.config.prod.js"
   },
@@ -27,6 +30,7 @@
     "eslint": "^8.40.0",
     "file-loader": "^6.2.0",
     "fork-ts-checker-webpack-plugin": "^8.0.0",
+    "gh-pages": "^6.0.0",
     "html-webpack-plugin": "^5.5.1",
     "identity-obj-proxy": "^3.0.0",
     "mini-css-extract-plugin": "^2.7.6",
