@@ -1,0 +1,95 @@
+@font-face {
+  font-family: "HCo Gotham SSm";
+  src: url(./gothamssm/GothamSSm-Bold_italic.woff) format("woff"),
+    url(./gothamssm/GothamSSm-Bold_italic.woff2) format("woff2");
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "HCo Gotham SSm";
+  src: url(./gothamssm/GothamSSm-Bold_normal.woff) format("woff"),
+    url(./gothamssm/GothamSSm-Bold_normal.woff2) format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "HCo Gotham SSm";
+  src: url(./gothamssm/GothamSSm-Book_italic.woff) format("woff"),
+    url(./gothamssm/GothamSSm-Book_italic.woff2) format("woff2");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "HCo Gotham SSm";
+  src: url(./gothamssm/GothamSSm-Book_normal.woff) format("woff"),
+    url(./gothamssm/GothamSSm-Book_normal.woff2) format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "HCo Gotham SSm";
+  src: url(./gothamssm/GothamSSm-Light_italic.woff) format("woff"),
+    url(./gothamssm/GothamSSm-Light_italic.woff2) format("woff2");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "HCo Gotham SSm";
+  src: url(./gothamssm/GothamSSm-Light_normal.woff) format("woff"),
+    url(./gothamssm/GothamSSm-Light_normal.woff2) format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "HCo Gotham SSm";
+  src: url(./gothamssm/GothamSSm-Medium_italic.woff) format("woff"),
+    url(./gothamssm/GothamSSm-Medium_italic.woff2) format("woff2");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "HCo Gotham SSm";
+  src: url(./gothamssm/GothamSSm-Medium_normal.woff) format("woff"),
+    url(./gothamssm/GothamSSm-Medium_normal.woff2) format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "HCo Gotham SSm";
+  src: url(./gothamssm/GothamSSm-XBlack_italic.woff) format("woff"),
+    url(./gothamssm/GothamSSm-XBlack_italic.woff2) format("woff2");
+  font-weight: 800;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "HCo Gotham SSm";
+  src: url(./gothamssm/GothamSSm-XBlack_normal.woff) format("woff"),
+    url(./gothamssm/GothamSSm-XBlack_normal.woff2) format("woff2");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "HCo Gotham SSm";
+  src: url(./gothamssm/GothamSSm-XLight_italic.woff) format("woff"),
+    url(./gothamssm/GothamSSm-XLight_italic.woff2) format("woff2");
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "HCo Gotham SSm";
+  src: url(./gothamssm/GothamSSm-XLight_normal.woff) format("woff"),
+    url(./gothamssm/GothamSSm-XLight_normal.woff2) format("woff2");
+  font-weight: 200;
+  font-style: normal;
+}

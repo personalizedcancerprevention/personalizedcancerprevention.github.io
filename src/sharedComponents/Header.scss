@@ -1,7 +1,7 @@
 @import "../globalstyle/variables.scss";
 
 .header-container {
-    color: white;
+    // color: white;
     height: 64px;
     display: flex;
     align-items: center;
@@ -14,9 +14,9 @@
         display: inline-flex;
         gap: 1rem;
 
-        .ant-btn {
-            color: rgba(255, 255, 255, 0.8);
-        }
+        // .ant-btn {
+        //     color: rgba(255, 255, 255, 0.8);
+        // }
 
         .button-container {
             font-family: 'Play';

@@ -1,29 +1,217 @@
 @import "../globalstyle/variables.scss";
+@import "../fonts/font-gothamssm.css";
+$font-gothamssm: "HCo Gotham SSm";
 
 .homepage-container {
+
+  div,
+  p {
+    font-family: $font-gothamssm;
+  }
+
   padding: 16px 32px;
-  color: white;
+  // color: white;
+  // display: flex;
+
+  .header-section-container {
+    padding: 64px;
+    border-radius: 8px;
+    background: var(--msk-blue-msk-blue-10, #F0F5FF);
+
+    display: flex;
+    flex-direction: row;
+
+    div {
+      color: var(--msk-blue-msk-blue-90, #001641);
+
+      /* msk--p */
+      font-family: Gotham;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 28px;
+      /* 175% */
+    }
+
+    .button-container {
+      margin-top: 36px;
+      direction: rtl;
+    }
+  }
+
+
+
+  .risk-section-container {
+    margin-top: 2rem;
+
+    .header {
+      color: var(--msk-warm-gray-msk-warm-gray-100, #171414);
+
+      /* msk--h2 */
+      font-family: Gotham;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 40px;
+      /* 125% */
+      letter-spacing: -0.256px;
+    }
+
+    .cards-container {
+      display: flex;
+      gap: 16px;
+      margin-top: 16px;
+      ;
+
+      .card-container {
+        padding: 16px;
+        border-radius: 8px;
+        background: var(--msk--white-0, #FFF);
+
+        /* Elevations/msk--elevation-plus-03 */
+        box-shadow: 0px 3px 8px 0px rgba(0, 22, 65, 0.10), 0px 1.5px 4px 0px rgba(0, 22, 65, 0.10), 0px 0.75px 2px 0px rgba(0, 22, 65, 0.10);
+      }
+    }
+  }
+
+  .what-we-look-at-container {
+    margin-top: 2rem;
+
+    .cards-container {
+      margin-top: 16px;
+      gap: 16px;
+      display: flex;
+      flex-wrap: wrap;
+
+      .card-container {
+        max-width: 450px;
+        padding: 16px;
+        border-radius: 8px;
+        background: var(--msk--white-0, #FFF);
+
+        /* Elevations/msk--elevation-plus-03 */
+        box-shadow: 0px 3px 8px 0px rgba(0, 22, 65, 0.10), 0px 1.5px 4px 0px rgba(0, 22, 65, 0.10), 0px 0.75px 2px 0px rgba(0, 22, 65, 0.10);
+
+        // .icon-container {
+        //   width: 443px;
+        //   height: 396px;
+
+        // }
+
+        .title {
+          color: var(--msk-warm-gray-msk-warm-gray-100, #171414);
+
+          /* msk--h3 */
+          font-family: Gotham;
+          font-size: 26px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 36px;
+          /* 138.462% */
+          letter-spacing: -0.125px;
+        }
+
+        .description {
+          color: var(--msk-warm-gray-msk-warm-gray-100, #171414);
+
+          /* msk--p */
+          font-family: Gotham;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 28px;
+          /* 175% */
+        }
+      }
+    }
+  }
+
+  .what-we-provide-container {
+    margin-top: 2rem;
+
+    .header {
+      color: var(--msk-warm-gray-msk-warm-gray-100, #171414);
+
+      /* msk--h2 */
+      font-family: Gotham;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 40px;
+      /* 125% */
+      letter-spacing: -0.256px;
+    }
+
+    .cards-container {
+      margin-top: 16px;
+      display: flex;
+      gap: 16px;
+
+      .card-container {
+        padding: 16px;
+        border-radius: 8px;
+        background: var(--msk--white-0, #FFF);
+
+        /* Elevations/msk--elevation-plus-03 */
+        box-shadow: 0px 3px 8px 0px rgba(0, 22, 65, 0.10), 0px 1.5px 4px 0px rgba(0, 22, 65, 0.10), 0px 0.75px 2px 0px rgba(0, 22, 65, 0.10);
+
+
+        .title-with-icon {
+          align-items: center;
+          display: flex;
+          gap: 16px;
+        }
+
+        .description {
+          color: var(--msk-warm-gray-msk-warm-gray-100, #171414);
+
+          /* msk--p */
+          font-family: Gotham;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 28px;
+          /* 175% */
+        }
+      }
+    }
+  }
+
+  .uncover-container {
+    padding: 32px;
+    margin-top: 2rem;
+    border-radius: 8px;
+    background: var(--msk-blue-msk-blue-10, #F0F5FF);
+
+    display: flex;
+    align-items: center;
+
+    .header {
+      color: var(--msk-blue-msk-blue-90, #001641);
+
+      /* msk--h1 */
+      font-family: Gotham;
+      font-size: 38px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 52px;
+      /* 136.842% */
+      letter-spacing: -0.304px;
+    }
+
+    .button-container {
+      margin-left: auto;
+      direction: rtl;
+    }
+  }
 
   .content-container {
     margin-top: 2rem;
-    height: 80vh;
+    // height: 80vh;
     width: 100%;
     text-align: center;
     word-break: break-word;
 
-    h1 {
-      text-align: center;
-      font-family: 'Play';
-      color: #FFF;
-      text-align: center;
-      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
-      font-family: Play;
-      font-size: 72px;
-      font-style: normal;
-      font-weight: 700;
-      line-height: normal;
-      margin-bottom: 16px;
-    }
 
     .hero-container {
       width: 100%;
@@ -33,26 +221,26 @@
 
 }
 
-@media screen and (max-width: $screen-sm-min) {
+// @media screen and (max-width: $screen-sm-min) {
 
-  .homepage-container {
-    .header-container {
-      display: inline-block;
+//   .homepage-container {
+//     .header-container {
+//       display: inline-block;
 
-      .right-container {
-        display: flex;
-        flex-wrap: wrap;
-      }
-    }
+//       .right-container {
+//         display: flex;
+//         flex-wrap: wrap;
+//       }
+//     }
 
-    .content-container {
-      margin-top: 6rem;
+//     .content-container {
+//       margin-top: 6rem;
 
-      div {
-        font-size: 2rem;
-        line-height: 2.5rem;
-      }
-    }
-  }
+//       div {
+//         font-size: 2rem;
+//         line-height: 2.5rem;
+//       }
+//     }
+//   }
 
-}
+// }

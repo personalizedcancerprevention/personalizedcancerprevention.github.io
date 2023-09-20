@@ -91,7 +91,7 @@ const Header = () => {
       <img src={logo} className="logo-container" alt="logo"></img>
 
       <Menu
-        theme="dark"
+        // theme="dark"
         onClick={onClick}
         selectedKeys={[current]}
         mode="horizontal"
