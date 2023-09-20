@@ -29,7 +29,7 @@ function HomePage() {
             Get Started
           </Button>
         </div>
-        <div className="right-contaienr">
+        <div className="right-container">
           <svg
             width="538"
             height="289"

@@ -69,6 +69,18 @@ function App() {
           },
         ];
         setMessages(tmpMessage as any);
+      } else {
+        const tmpMessage = [
+          ...messages,
+          {
+            ...newMessage,
+          },
+          {
+            message: `echo: ${newMessage.message}`,
+            sendor: "ChatGPT",
+          },
+        ];
+        setMessages(tmpMessage as any);
       }
       console.error("Error processing message:", error);
     } finally {
