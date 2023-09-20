@@ -21,6 +21,7 @@ import {
   MessageInput,
   TypingIndicator,
 } from "@chatscope/chat-ui-kit-react";
+import { chatGPTMockResponse } from "./chatGPTMockResponse";
 
 function App() {
   const [messages, setMessages] = useState([
@@ -56,6 +57,19 @@ function App() {
         setMessages(tmpMessage as any);
       }
     } catch (error) {
+      if (newMessage.message.includes("prevent cancer")) {
+        const tmpMessage = [
+          ...messages,
+          {
+            ...newMessage,
+          },
+          {
+            message: chatGPTMockResponse["how to prevent cancer"],
+            sendor: "ChatGPT",
+          },
+        ];
+        setMessages(tmpMessage as any);
+      }
       console.error("Error processing message:", error);
     } finally {
       setIsTyping(false);
