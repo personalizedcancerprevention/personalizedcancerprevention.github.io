@@ -1,7 +1,9 @@
-import React from "react"
+import React, { useRef }  from "react"
 import "./Report.scss"
-import { Button, Card, Col, Row } from "antd";
-import {  RightOutlined } from "@ant-design/icons";
+import { Button, Col, Row } from "antd";
+import { RightOutlined, DownloadOutlined } from "@ant-design/icons";
+import generatePDF from 'react-to-pdf';
+
 /*  User 1 – Male at birth /  50  
 // physical https://www.mskcc.org/cancer-care/patient-education/physical-activity
 // family  https://www.mskcc.org/cancer-care/patient-education/family-health-history
@@ -33,12 +35,18 @@ import {  RightOutlined } from "@ant-design/icons";
 
 
 const Report = () => {
+  const targetRef = useRef<any>();
 
   return (
-    <div className="layout">
-      <div className="h4">You are at high risk for</div>
+    <div className="layout" ref={targetRef}>
+      <Button
+          className="button-download"
+          title="Download Report"
+            onClick={() => generatePDF(targetRef, { filename: 'MSK Prevent Report and Action Plan.pdf' })}><DownloadOutlined />
+          </Button>
+        <h2>You are at high risk for</h2>
        <Row gutter={[16, 24]}>
-        <Col className="gutter-row risk" span={16}>
+        <Col className="gutter-row risk" span={20}>
           <h2>Skin cancer</h2>
           <div>Skin cancer is a type of cancer that develops in the skin cells. It is caused by damage to the DNA in the skin cells, often caused by exposure to ultraviolet (UV) radiation from the sun or tanning beds.</div>
 
@@ -58,7 +66,7 @@ const Report = () => {
       </Row>
 
       <Row gutter={[16, 24]}>
-        <Col className="gutter-row risk" span={16}>
+        <Col className="gutter-row risk" span={20}>
           <h2>Lung cancer</h2>
           <div>Lung cancer is a type of cancer that starts in the lungs, caused by uncontrolled growth of abnormal cells. Smoking is the leading cause of lung cancer, followed by exposure to secondhand smoke, radon gas, and other carcinogens.</div>
           
@@ -75,6 +83,15 @@ const Report = () => {
           <div className="resource" onClick= {() => {window.open("https://www.mskcc.org/experience/patient-support/tobacco-treatment", "_blank");}}>MSK's Tobacco Treatment Program</div>
           <div className="resource" onClick= {() => {window.open("https://www.mskcc.org/cancer-care/types/lung/risk-factors-prevention", "_blank");}}>Lung Cancer Prevention & Risk Factors</div>
         </Col>
+      </Row>
+
+      <Row gutter={[16, 24]}>
+        <Col className="gutter-row recommend" span={20}>Recommend MSK Prevent to others
+        <Button
+            className="button-invite"
+            icon={<RightOutlined />}
+            onClick={() => { window.open("https://www.mskcc.org/appointments/request-appointment?appointment_type=new", "_blank"); }}
+        >Schedule a screening </Button></Col>
       </Row>
     </div>
   )

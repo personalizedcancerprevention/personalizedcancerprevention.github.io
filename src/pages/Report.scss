@@ -1,7 +1,6 @@
 
-
 .layout {
-  padding: 20px;
+  padding: 20px 20px 20px 40px;
 }
 
 .risk {
@@ -16,6 +15,18 @@
   direction: rtl;
 }
 
+.button-download {
+  float: right;
+}
+
+.button-invite {
+  direction: rtl;
+  float:right;
+  margin: 0px 20px 0px 0px;
+  font-weight: 600;
+  border-color:#113E90;
+}
+
 .resource {
   /* msk--white-0 */
   background: #FFFFFF;
@@ -26,7 +37,6 @@
   border-radius: 8px;
   padding: 8px;
   margin: 8px 0px;
-  
 }
 .resource:hover {
   cursor: pointer;
@@ -42,311 +52,9 @@
   letter-spacing: -0.0032em;
 }
 
-.overview {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 16px;
-  gap: 16px;
-
-  position: absolute;
-  width: 869px;
-  height: 207px;
-  left: 64px;
-  top: 254px;
-
-  /* msk--yellow/msk--yellow-10 */
-  background: #FCF4D6;
-  border-radius: 8px;
-
-  .risk {
-    /* You are at high risk for */
-    
-      width: 289px;
-      height: 36px;
-    
-      /* msk--h3 */
-      font-family: 'Gotham';
-      font-style: normal;
-      font-weight: 400;
-      font-size: 26px;
-      line-height: 36px;
-      /* identical to box height, or 138% */
-      letter-spacing: -0.0048em;
-    
-      color: #000000;
-  }
-
-  flex: none;
-    order: 0;
-    flex-grow: 0;
-
-  .overview-skin {
-    /* Frame 2503 */
-    
-      /* Auto layout */
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      padding: 0px;
-      gap: 16px;
-    
-      width: 410.5px;
-      height: 76px;
-    
-      /* Inside auto layout */
-      flex: none;
-      order: 1;
-      flex-grow: 1;
-    
-      /* Skin */
-      .header {
-      width: 47px;
-      height: 32px;
-    
-      /* msk--h4 */
-      font-family: 'Gotham';
-      font-style: normal;
-      font-weight: 500;
-      font-size: 22px;
-      line-height: 32px;
-      /* identical to box height, or 145% */
-      letter-spacing: -0.0032em;
-    
-      color: #000000;
-      }
-    
-      /* Inside auto layout */
-      flex: none;
-      order: 0;
-      flex-grow: 0;
-    
-    
-      /* Brief info */
-      .brief {
-      width: 73px;
-      height: 28px;
-    
-      /* msk--p */
-      font-family: 'Gotham';
-      font-style: normal;
-      font-weight: 400;
-      font-size: 16px;
-      line-height: 28px;
-      /* identical to box height, or 175% */
-    
-      color: #000000;
-      }
-    
-      /* Inside auto layout */
-      flex: none;
-      order: 1;
-      flex-grow: 0;
-  }
-
-.overview-lung {
-  /* Frame 2503 */
-  
-    /* Auto layout */
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0px;
-    gap: 16px;
-  
-    width: 410.5px;
-    height: 76px;
-  
-  
-    /* Inside auto layout */
-    flex: none;
-    order: 0;
-    flex-grow: 1;
-  
-  
-    /* Lung */
-  .header {
-    width: 56px;
-    height: 32px;
-  
-    /* msk--h4 */
-    font-family: 'Gotham';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 22px;
-    line-height: 32px;
-    /* identical to box height, or 145% */
-    letter-spacing: -0.0032em;
-  
-    color: #000000;
-  }
-  
-    /* Inside auto layout */
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-  
-  .brief {
-    /* Brief info */
-  
-    width: 73px;
-    height: 28px;
-  
-    /* msk--p */
-    font-family: 'Gotham';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 28px;
-    /* identical to box height, or 175% */
-  
-    color: #000000;
-  }
-  
-    /* Inside auto layout */
-    flex: none;
-    order: 1;
-    flex-grow: 0;
-  }
-}
-
-.lung {
-  /* Frame 2508 */
-  
-    /* Auto layout */
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0px;
-    gap: 10px;
-  
-    width: 869px;
-    height: 136px;
-  
-  
-    /* Inside auto layout */
-    flex: none;
-    order: 0;
-    align-self: stretch;
-    flex-grow: 0;
-  
-  
-    /* Lung cancer */
-    .header {
-    width: 194px;
-    height: 40px;
-  
-    /* msk--h2 */
-    font-family: 'Gotham';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 32px;
-    line-height: 40px;
-    /* identical to box height, or 125% */
-    letter-spacing: -0.008em;
-  
-    color: #000000;
-    }
-
-    /* Inside auto layout */
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-  
-  
-    /* We recommend you get screened for lung cancer at MSK */
-    .blurb {
-    width: 869px;
-    height: 28px;
-  
-    /* msk--p */
-    font-family: 'Gotham';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 28px;
-    /* identical to box height, or 175% */
-  
-    color: #000000;
-    }
-  
-    /* Inside auto layout */
-    flex: none;
-    order: 1;
-    align-self: stretch;
-    flex-grow: 0;
-  
-  
-    /* Button */
-    .button {
-    /* Auto layout */
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 12px 16px;
-    gap: 16px;
-  
-    width: 239px;
-    height: 48px;
-  
-    /* msk--blue/msk--blue-70 */
-    background: #113E90;
-    border-radius: 4px;
-    }
-    /* Inside auto layout */
-    flex: none;
-    order: 2;
-    flex-grow: 0;
-  
-  
-    /* Button label */
-    .button-label {
-    width: 171px;
-    height: 24px;
-  
-    /* msk--button */
-    font-family: 'Gotham';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 24px;
-    /* identical to box height, or 150% */
-    text-align: center;
-  
-    /* msk--white-0 */
-    color: #FFFFFF;
-    }
-  
-    /* Inside auto layout */
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-  
-  
-    /* chevron_right
-  
-  arrow, arrows, chevron, direction, forward, right, triangle
-  */
-  .chevron_right {
-    width: 20px;
-    height: 20px;
-  }
-  
-    /* Inside auto layout */
-    flex: none;
-    order: 1;
-    flex-grow: 0;
-  
-  
-    /* Vector */
-  .vector {
-    position: absolute;
-    left: 34.56%;
-    right: 34.56%;
-    top: 25%;
-    bottom: 25%;
-  
-    /* msk--white-0 */
-    background: #FFFFFF;
-  }
+.recommend {
+  background-color: #F0F5FF;
+  padding: 8px;
+  margin: 8px 0px;
+  font-weight: 600;
 }
