@@ -47,7 +47,8 @@ const Report = () => {
           <Button
           type="primary"
             className="button-container"
-          icon={<RightOutlined />}
+            icon={<RightOutlined />}
+            onClick={() => { window.open("https://www.mskcc.org/appointments/request-appointment?appointment_type=new", "_blank"); }}
         >Schedule a screening </Button>
 
           <h3>Resources</h3>
@@ -66,7 +67,8 @@ const Report = () => {
           <Button
           type="primary"
             className="button-container"
-          icon={<RightOutlined />}
+            icon={<RightOutlined />}
+            onClick={() => { window.open("https://www.mskcc.org/appointments/request-appointment?appointment_type=new", "_blank"); }}
         >Schedule a screening </Button>
 
           <h3>Resources</h3>
