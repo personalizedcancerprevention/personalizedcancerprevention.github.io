@@ -148,11 +148,11 @@ function App() {
         <div
           style={{
             position: "fixed",
-            width: "100%",
-            textAlign: "right",
+            // width: "100%",
+            // textAlign: "right",
             paddingRight: "32px",
             bottom: "110px",
-            // right: "20px",
+            right: "20px",
           }}
         >
           {showMessage ? (
