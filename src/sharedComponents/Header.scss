@@ -1,5 +1,42 @@
 @import "../globalstyle/variables.scss";
 
+.new-header-container {
+    display: flex;
+    flex-direction: row;
+    padding: 0 32px;
+    height: 64px;
+    border-bottom: 2px solid #E5E0DF;
+    align-items: center;
+
+    background: var(--msk--white-0, #FFF);
+
+    .left-container {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+        .product-container {
+            padding-left: 16px;
+            border-left: 1px solid #E5E0DF;
+            color: var(--msk-blue-msk-blue-80, #002569);
+            font-family: Gotham;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 24px;
+            /* 150% */
+        }
+    }
+
+    .right-container {
+        margin-left: auto;
+
+        .icon-container {
+            cursor: pointer;
+        }
+    }
+}
+
 .header-container {
     // color: white;
     height: 64px;

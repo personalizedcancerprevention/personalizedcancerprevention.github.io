@@ -93,6 +93,11 @@ h3 {
     background: inherit;
 }
 
+.cs-message__html-content {
+    // direction: ltr;
+    text-align: left;
+}
+
 // .ant-menu-dark.ant-menu-horizontal>.ant-menu-item-selected {
 //     background-color: rgba(80, 115, 0, 0.75);
 // }

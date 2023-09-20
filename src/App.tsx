@@ -22,6 +22,8 @@ import {
   MessageInput,
   TypingIndicator,
 } from "@chatscope/chat-ui-kit-react";
+import { chatGPTMockResponse } from "./chatGPTMockResponse";
+import UncoverYourRiskPage from "./pages/UncoverYourRiskPage";
 
 function App() {
   const [messages, setMessages] = useState([
@@ -57,6 +59,46 @@ function App() {
         setMessages(tmpMessage as any);
       }
     } catch (error) {
+      if (newMessage.message.includes("prevent cancer")) {
+        const tmpMessage = [
+          ...messages,
+          {
+            ...newMessage,
+          },
+          {
+            message: chatGPTMockResponse["how to prevent cancer"],
+            sendor: "ChatGPT",
+          },
+        ];
+        setMessages(tmpMessage as any);
+      } else if (
+        newMessage.message.includes("schedule an appointment") ||
+        newMessage.message.includes("schedule")
+      ) {
+        const tmpMessage = [
+          ...messages,
+          {
+            ...newMessage,
+          },
+          {
+            message: chatGPTMockResponse["schedule an appointment"],
+            sendor: "ChatGPT",
+          },
+        ];
+        setMessages(tmpMessage as any);
+      } else {
+        const tmpMessage = [
+          ...messages,
+          {
+            ...newMessage,
+          },
+          {
+            message: `echo: ${newMessage.message}`,
+            sendor: "ChatGPT",
+          },
+        ];
+        setMessages(tmpMessage as any);
+      }
       console.error("Error processing message:", error);
     } finally {
       setIsTyping(false);
@@ -106,6 +148,10 @@ function App() {
         <Router>
           <Header></Header>
           <Routes>
+            <Route
+              path="/uncover-your-risk"
+              element={<UncoverYourRiskPage />}
+            ></Route>
             <Route path="/all-about-cancer" element={<HomePage />}></Route>
             <Route
               path="/risk-accessment"
@@ -119,11 +165,11 @@ function App() {
         <div
           style={{
             position: "fixed",
-            width: "100%",
-            textAlign: "right",
+            // width: "100%",
+            // textAlign: "right",
             paddingRight: "32px",
             bottom: "110px",
-            // right: "20px",
+            right: "20px",
           }}
         >
           {showMessage ? (
