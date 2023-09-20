@@ -22,6 +22,7 @@ import {
   TypingIndicator,
 } from "@chatscope/chat-ui-kit-react";
 import { chatGPTMockResponse } from "./chatGPTMockResponse";
+import UncoverYourRiskPage from "./pages/UncoverYourRiskPage";
 
 function App() {
   const [messages, setMessages] = useState([
@@ -131,6 +132,10 @@ function App() {
         <Router>
           <Header></Header>
           <Routes>
+            <Route
+              path="/uncover-your-risk"
+              element={<UncoverYourRiskPage />}
+            ></Route>
             <Route path="/all-about-cancer" element={<HomePage />}></Route>
             <Route
               path="/risk-accessment"

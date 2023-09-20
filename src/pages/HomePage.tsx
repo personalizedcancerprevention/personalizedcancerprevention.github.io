@@ -10,8 +10,10 @@ import {
   QuestionCircleOutlined,
   RightOutlined,
 } from "@ant-design/icons";
+import { useNavigate } from "react-router-dom";
 
 function HomePage() {
+  const navigate = useNavigate();
   return (
     <div className="homepage-container">
       <div className="header-section-container">
@@ -25,6 +27,9 @@ function HomePage() {
             type="primary"
             className="button-container"
             icon={<RightOutlined />}
+            onClick={() => {
+              navigate("/uncover-your-risk");
+            }}
           >
             Get Started
           </Button>
