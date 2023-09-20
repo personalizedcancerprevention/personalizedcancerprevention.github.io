@@ -41,4 +41,7 @@ export const chatGPTMockResponse = {
     
     Chronic stress may weaken the immune system, potentially increasing cancer risk. Find healthy ways to manage stress through relaxation techniques, hobbies, or support groups.
     Remember that while these steps can reduce your risk, no strategy can guarantee that you won't develop cancer. Regular check-ups with your healthcare provider are essential for early detection and timely treatment if cancer does occur. Additionally, it's important to consult with a healthcare professional for personalized advice and recommendations based on your individual health and risk factors.`,
+
+  "schedule an appointment":
+    "https://www.mskcc.org/appointments/request-appointment",
 };

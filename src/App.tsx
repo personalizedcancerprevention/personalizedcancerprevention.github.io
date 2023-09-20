@@ -70,6 +70,21 @@ function App() {
           },
         ];
         setMessages(tmpMessage as any);
+      } else if (
+        newMessage.message.includes("schedule an appointment") ||
+        newMessage.message.includes("schedule")
+      ) {
+        const tmpMessage = [
+          ...messages,
+          {
+            ...newMessage,
+          },
+          {
+            message: chatGPTMockResponse["schedule an appointment"],
+            sendor: "ChatGPT",
+          },
+        ];
+        setMessages(tmpMessage as any);
       } else {
         const tmpMessage = [
           ...messages,
