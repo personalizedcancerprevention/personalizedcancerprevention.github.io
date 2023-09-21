@@ -55,20 +55,23 @@ const Report = ({ gender }: { gender: string})=> {
           title="Download Report"
           onClick={() => generatePDF(targetRef, { filename: 'MSK Prevent Report and Action Plan.pdf' })}><DownloadOutlined />
         </Button>
-        <h2>You are at high risk for</h2>
+        <div className="high-risk">You are at high risk for</div>
         <Row gutter={[16, 24]}>
           <Col className="gutter-row risk" span={20}>
             <h2>Skin cancer</h2>
             <div>Skin cancer is a type of cancer that develops in the skin cells. It is caused by damage to the DNA in the skin cells, often caused by exposure to ultraviolet (UV) radiation from the sun or tanning beds.</div>
 
             <h3>Screening</h3>
-            <div>We recommend you getting screened at MSK</div>
+            <div>We recommend you get screened for skin cancer with your own provider.</div>
+
+            <h3>Already screened?</h3>
+            <div>If you’ve already screened and your results indicate that you need treatment you can schedule an appointment with MSK for treatment.</div>
+
             <Button
-              type="primary"
               className="button-container"
               icon={<RightOutlined />}
               onClick={() => { window.open("https://www.mskcc.org/appointments/request-appointment?appointment_type=new", "_blank"); }}
-            >Schedule a screening </Button>
+            >Schedule an appointment</Button>
 
             <h3>Resources</h3>
             <div className="resource" onClick={() => { window.open("https://www.mskcc.org/cancer-care/types/skin/screening-guidelines-skin", "_blank"); }}>What You Should Know About Skin Cancer Screening</div>
@@ -87,12 +90,38 @@ const Report = ({ gender }: { gender: string})=> {
               type="primary"
               className="button-container"
               icon={<RightOutlined />}
-              onClick={() => { window.open("https://www.mskcc.org/appointments/request-appointment?appointment_type=new", "_blank"); }}
+              onClick={() => { window.open("https://appointments.mskcc.org/lung-screening", "_blank"); }}
             >Schedule a screening </Button>
 
             <h3>Resources</h3>
             <div className="resource" onClick={() => { window.open("https://www.mskcc.org/experience/patient-support/tobacco-treatment", "_blank"); }}>MSK's Tobacco Treatment Program</div>
             <div className="resource" onClick={() => { window.open("https://www.mskcc.org/cancer-care/types/lung/risk-factors-prevention", "_blank"); }}>Lung Cancer Prevention & Risk Factors</div>
+          </Col>
+        </Row>
+
+        <div className="avg-risk">You are at average risk for</div>
+
+        <Row gutter={[16, 24]}>
+          <Col className="gutter-row risk" span={20}>
+            <h2>Colon cancer</h2>
+          
+            <div>It is recommended that after 45 everyone at average risk for developing colorectal cancer should undergo regular screening for Colon Cancers.</div>
+
+            <h3>Screening</h3>
+            <div>We recommend you get screened for colon cancer with your own provider.</div>
+
+            <h3>Already screened?</h3>
+            <div>If you’ve already screened and your results indicate that you need treatment you can schedule an appointment with MSK for treatment.</div>
+
+            <Button
+              className="button-container"
+              icon={<RightOutlined />}
+              onClick={() => { window.open("https://www.mskcc.org/appointments/request-appointment?appointment_type=new", "_blank"); }}
+            >Schedule an appointment</Button>
+
+            <h3>Resources</h3>
+            <div className="resource" onClick={() => { window.open("https://www.mskcc.org/cancer-care/types/colon/guidelines", "_blank"); }}>Colon Cancer Screening Guidelines</div>
+            <div className="resource" onClick={() => { window.open("https://www.mskcc.org/experience/become-patient/becoming-patient", "_blank"); }}>Becoming a Patient</div>
           </Col>
         </Row>
 
@@ -131,7 +160,6 @@ const Report = ({ gender }: { gender: string})=> {
             <h2>General resources</h2>
             <div>You can take steps to prevent cancer even if you are not at a particularly high risk.</div>
 
-            <h3>Resources</h3>
             <div className="resource" onClick={() => { window.open("https://www.mskcc.org/cancer-care/patient-education/your-guide-preventing-breast-cancer", "_blank"); }}>What You Can Do to Prevent Breast Cancer</div>
             <div className="resource" onClick={() => { window.open("https://www.mskcc.org/cancer-care/patient-education/your-guide-preventing-gynecologic", "_blank"); }}>What You Can Do To Prevent Gynecologic Cancer</div>
             <div className="resource" onClick={() => { window.open("https://www.mskcc.org/cancer-care/risk-assessment-screening/screening", "_blank"); }}>MSK Screening Services</div>
