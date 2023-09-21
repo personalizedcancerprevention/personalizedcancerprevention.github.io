@@ -81,8 +81,24 @@ function App() {
             ...newMessage,
           },
           {
-            message: chatGPTMockResponse["schedule an appointment"],
+            message:
+              "<a target='_blank' href='https://www.mskcc.org/appointments/request-appointment'>https://www.mskcc.org/appointments/request-appointment</a>",
             sendor: "ChatGPT",
+            type: "html",
+          },
+        ];
+        setMessages(tmpMessage as any);
+      } else if (newMessage.message.includes("genetic testing")) {
+        const tmpMessage = [
+          ...messages,
+          {
+            ...newMessage,
+          },
+          {
+            message:
+              "<a target='_blank' href='https://www.mskcc.org/cancer-care/risk-assessment-screening/genetic-counseling-and-testing'>https://www.mskcc.org/cancer-care/risk-assessment-screening/genetic-counseling-and-testing</a>",
+            sendor: "ChatGPT",
+            type: "html",
           },
         ];
         setMessages(tmpMessage as any);

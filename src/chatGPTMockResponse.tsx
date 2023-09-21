@@ -44,4 +44,7 @@ export const chatGPTMockResponse = {
 
   "schedule an appointment":
     "https://www.mskcc.org/appointments/request-appointment",
+
+  "genetic testing":
+    "https://www.mskcc.org/cancer-care/risk-assessment-screening/genetic-counseling-and-testing",
 };
