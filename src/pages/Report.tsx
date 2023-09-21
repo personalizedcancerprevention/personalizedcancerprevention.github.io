@@ -1,7 +1,7 @@
-import React, { useRef }  from "react"
+import React, { useRef, useState }  from "react"
 import "./Report.scss"
-import { Button, Col, Row } from "antd";
-import { RightOutlined, DownloadOutlined } from "@ant-design/icons";
+import { Button, Col, Input, Modal, Row, message } from "antd";
+import { RightOutlined, DownloadOutlined, SendOutlined } from "@ant-design/icons";
 import generatePDF from 'react-to-pdf';
 
 /*  User 1 – Male at birth /  50  
@@ -33,12 +33,21 @@ import generatePDF from 'react-to-pdf';
   // invite a friend (email)
   */
 
-
 const Report = () => {
   const targetRef = useRef<any>();
-
+  const [isModalOpen, setIsModalOpen] = useState<boolean>()
+  const [messageApi, contextHolder] = message.useMessage();
+  
+  const success = () => {
+    messageApi.open({
+      type: 'success',
+      content: 'Congratulations! You took a step in preventing cancer!',
+    });
+  };
+  
   return (
     <div className="layout" ref={targetRef}>
+      {contextHolder}
       <Button
           className="button-download"
           title="Download Report"
@@ -89,9 +98,19 @@ const Report = () => {
         <Col className="gutter-row recommend" span={20}>Recommend MSK Prevent to others
         <Button
             className="button-invite"
-            icon={<RightOutlined />}
-            onClick={() => { window.open("https://www.mskcc.org/appointments/request-appointment?appointment_type=new", "_blank"); }}
-        >Schedule a screening </Button></Col>
+            icon={<SendOutlined />}
+            onClick={() => setIsModalOpen(true)}
+          >Invite </Button>
+          <Modal title="Invite your friend to MSK Predict"
+            open={isModalOpen}
+            onOk={() => {
+              setIsModalOpen(false)
+              success()
+            }}
+            onCancel={() => setIsModalOpen(false)}>
+            <Input placeholder="Enter email" />
+          </Modal>
+        </Col>
       </Row>
     </div>
   )
