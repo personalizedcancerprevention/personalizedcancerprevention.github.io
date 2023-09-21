@@ -1456,6 +1456,9 @@ function HomePage() {
           type="primary"
           className="button-container"
           icon={<RightOutlined />}
+          onClick={() => {
+            navigate("/uncover-your-risk");
+          }}
         >
           Get Started
         </Button>
