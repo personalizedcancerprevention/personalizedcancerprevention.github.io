@@ -18,7 +18,7 @@ function HomePage() {
     <div className="homepage-container">
       <div className="header-section-container">
         <div className="left-container">
-          <h2>Uncover your cancer risk</h2>
+          <h2 style={{ fontSize: "38px" }}>Uncover your cancer risk</h2>
           <div>
             We can help you know your cancer risk and take steps to prevent it
             based off of unique factors affecting you.
@@ -36,6 +36,7 @@ function HomePage() {
         </div>
         <div className="right-container">
           <svg
+            style={{ height: "220px" }}
             width="538"
             height="289"
             viewBox="0 0 538 289"
@@ -171,18 +172,18 @@ function HomePage() {
         <div className="cards-container">
           <div className="card-container">
             <div className="header-with-icon">
-              <QuestionCircleOutlined style={{ marginRight: "16px" }} />1 in 2
+              <QuestionCircleOutlined style={{ marginRight: "8px" }} />1 in 2
               people develop cancer in their lifetime
             </div>
-            <div>Source</div>
+            <div style={{ marginLeft: "24px" }}>Source</div>
           </div>
 
           <div className="card-container">
             <div className="header-with-icon">
-              <QuestionCircleOutlined style={{ marginRight: "16px" }} />
+              <QuestionCircleOutlined style={{ marginRight: "8px" }} />
               Early screening and detection lowers mortality rate
             </div>
-            <div>Source</div>
+            <div style={{ marginLeft: "24px" }}>Source</div>
           </div>
         </div>
       </div>
