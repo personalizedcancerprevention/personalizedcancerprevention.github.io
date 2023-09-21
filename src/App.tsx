@@ -10,6 +10,7 @@ import GeneticRiskAssessment from "./pages/GeneticRiskAssessment";
 import "./App.scss";
 import Header from "./sharedComponents/Header";
 import Footer from "./sharedComponents/Footer";
+import Report from "./pages/Report";
 import { Button, ConfigProvider, theme } from "antd";
 import ChatIcon from "./assets/chatIcon.svg";
 import "@chatscope/chat-ui-kit-styles/dist/default/styles.min.css";
@@ -157,6 +158,7 @@ function App() {
               element={<GeneticRiskAssessment />}
             ></Route>
             <Route path="/" element={<HomePage />}></Route>
+            <Route path="/report" element={<Report gender="male" />}></Route>
           </Routes>
         </Router>
 

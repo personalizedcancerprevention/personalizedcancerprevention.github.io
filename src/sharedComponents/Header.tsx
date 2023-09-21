@@ -102,7 +102,7 @@ const Header = () => {
             fill="#002569"
           />
         </svg>
-        <div className="product-container">Product</div>
+        <div className="product-container">MSK Prevent</div>
       </div>
       <div className="right-container">
         <svg
