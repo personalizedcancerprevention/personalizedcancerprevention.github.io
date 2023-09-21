@@ -28,7 +28,7 @@ import UncoverYourRiskPage from "./pages/UncoverYourRiskPage";
 function App() {
   const [messages, setMessages] = useState([
     {
-      message: "Hello, I'm ChatGPT! Ask me anything!",
+      message: "Hello, I'm MSKGPT! Ask me anything!",
       sentTime: "just now",
       sender: "ChatGPT",
     },
