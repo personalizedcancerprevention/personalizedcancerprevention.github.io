@@ -158,7 +158,7 @@ function App() {
               element={<GeneticRiskAssessment />}
             ></Route>
             <Route path="/" element={<HomePage />}></Route>
-            <Route path="/report" element={<Report />}></Route>
+            <Route path="/report" element={<Report gender="male" />}></Route>
           </Routes>
         </Router>
 

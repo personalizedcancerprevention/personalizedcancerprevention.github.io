@@ -1,7 +1,7 @@
 import React, { useRef, useState }  from "react"
 import "./Report.scss"
-import { Button, Col, Input, Modal, Row, message } from "antd";
-import { RightOutlined, DownloadOutlined, SendOutlined } from "@ant-design/icons";
+import { Button, Col, Input, Modal, Row, Spin, message } from "antd";
+import { RightOutlined, DownloadOutlined, SendOutlined, LoadingOutlined } from "@ant-design/icons";
 import generatePDF from 'react-to-pdf';
 
 /*  User 1 – Male at birth /  50  
@@ -33,7 +33,8 @@ import generatePDF from 'react-to-pdf';
   // invite a friend (email)
   */
 
-const Report = () => {
+
+const Report = ({ gender }: { gender: string})=> {
   const targetRef = useRef<any>();
   const [isModalOpen, setIsModalOpen] = useState<boolean>()
   const [messageApi, contextHolder] = message.useMessage();
@@ -44,76 +45,124 @@ const Report = () => {
       content: 'Congratulations! You took a step in preventing cancer!',
     });
   };
-  
-  return (
-    <div className="layout" ref={targetRef}>
-      {contextHolder}
-      <Button
+    
+  if (gender === "male") {
+    return (
+      <div className="layout" ref={targetRef}>
+        {contextHolder}
+        <Button
           className="button-download"
           title="Download Report"
-            onClick={() => generatePDF(targetRef, { filename: 'MSK Prevent Report and Action Plan.pdf' })}><DownloadOutlined />
-          </Button>
+          onClick={() => generatePDF(targetRef, { filename: 'MSK Prevent Report and Action Plan.pdf' })}><DownloadOutlined />
+        </Button>
         <h2>You are at high risk for</h2>
-       <Row gutter={[16, 24]}>
-        <Col className="gutter-row risk" span={20}>
-          <h2>Skin cancer</h2>
-          <div>Skin cancer is a type of cancer that develops in the skin cells. It is caused by damage to the DNA in the skin cells, often caused by exposure to ultraviolet (UV) radiation from the sun or tanning beds.</div>
+        <Row gutter={[16, 24]}>
+          <Col className="gutter-row risk" span={20}>
+            <h2>Skin cancer</h2>
+            <div>Skin cancer is a type of cancer that develops in the skin cells. It is caused by damage to the DNA in the skin cells, often caused by exposure to ultraviolet (UV) radiation from the sun or tanning beds.</div>
 
-          <h3>Screening</h3>
-          <div>We recommend you getting screened at MSK</div>
-          <Button
-          type="primary"
-            className="button-container"
-            icon={<RightOutlined />}
-            onClick={() => { window.open("https://www.mskcc.org/appointments/request-appointment?appointment_type=new", "_blank"); }}
-        >Schedule a screening </Button>
+            <h3>Screening</h3>
+            <div>We recommend you getting screened at MSK</div>
+            <Button
+              type="primary"
+              className="button-container"
+              icon={<RightOutlined />}
+              onClick={() => { window.open("https://www.mskcc.org/appointments/request-appointment?appointment_type=new", "_blank"); }}
+            >Schedule a screening </Button>
 
-          <h3>Resources</h3>
-          <div className="resource" onClick= {() => {window.open("https://www.mskcc.org/cancer-care/types/skin/screening-guidelines-skin", "_blank");}}>What You Should Know About Skin Cancer Screening</div>
-          <div className="resource" onClick= {() => {window.open("https://www.mskcc.org/cancer-care/patient-education/preventing-skin-cancer", "_blank");}}>What You Can Do To Prevent Skin Cancer</div>
-        </Col>
-      </Row>
+            <h3>Resources</h3>
+            <div className="resource" onClick={() => { window.open("https://www.mskcc.org/cancer-care/types/skin/screening-guidelines-skin", "_blank"); }}>What You Should Know About Skin Cancer Screening</div>
+            <div className="resource" onClick={() => { window.open("https://www.mskcc.org/cancer-care/patient-education/preventing-skin-cancer", "_blank"); }}>What You Can Do To Prevent Skin Cancer</div>
+          </Col>
+        </Row>
 
-      <Row gutter={[16, 24]}>
-        <Col className="gutter-row risk" span={20}>
-          <h2>Lung cancer</h2>
-          <div>Lung cancer is a type of cancer that starts in the lungs, caused by uncontrolled growth of abnormal cells. Smoking is the leading cause of lung cancer, followed by exposure to secondhand smoke, radon gas, and other carcinogens.</div>
+        <Row gutter={[16, 24]}>
+          <Col className="gutter-row risk" span={20}>
+            <h2>Lung cancer</h2>
+            <div>Lung cancer is a type of cancer that starts in the lungs, caused by uncontrolled growth of abnormal cells. Smoking is the leading cause of lung cancer, followed by exposure to secondhand smoke, radon gas, and other carcinogens.</div>
           
-          <h3>Screening</h3>
-          <div>We recommend you getting screened at MSK</div>
-          <Button
-          type="primary"
-            className="button-container"
-            icon={<RightOutlined />}
-            onClick={() => { window.open("https://www.mskcc.org/appointments/request-appointment?appointment_type=new", "_blank"); }}
-        >Schedule a screening </Button>
+            <h3>Screening</h3>
+            <div>We recommend you getting screened at MSK</div>
+            <Button
+              type="primary"
+              className="button-container"
+              icon={<RightOutlined />}
+              onClick={() => { window.open("https://www.mskcc.org/appointments/request-appointment?appointment_type=new", "_blank"); }}
+            >Schedule a screening </Button>
 
-          <h3>Resources</h3>
-          <div className="resource" onClick= {() => {window.open("https://www.mskcc.org/experience/patient-support/tobacco-treatment", "_blank");}}>MSK's Tobacco Treatment Program</div>
-          <div className="resource" onClick= {() => {window.open("https://www.mskcc.org/cancer-care/types/lung/risk-factors-prevention", "_blank");}}>Lung Cancer Prevention & Risk Factors</div>
-        </Col>
-      </Row>
+            <h3>Resources</h3>
+            <div className="resource" onClick={() => { window.open("https://www.mskcc.org/experience/patient-support/tobacco-treatment", "_blank"); }}>MSK's Tobacco Treatment Program</div>
+            <div className="resource" onClick={() => { window.open("https://www.mskcc.org/cancer-care/types/lung/risk-factors-prevention", "_blank"); }}>Lung Cancer Prevention & Risk Factors</div>
+          </Col>
+        </Row>
 
-      <Row gutter={[16, 24]}>
-        <Col className="gutter-row recommend" span={20}>Recommend MSK Prevent to others
+        <Row gutter={[16, 24]}>
+          <Col className="gutter-row recommend" span={20}>Recommend MSK Prevent to others
+            <Button
+              className="button-invite"
+              icon={<SendOutlined />}
+              onClick={() => setIsModalOpen(true)}
+            >Invite </Button>
+            <Modal title="Invite your friend to MSK Predict"
+              open={isModalOpen}
+              onOk={() => {
+                setIsModalOpen(false)
+                success()
+              }}
+              onCancel={() => setIsModalOpen(false)}>
+              <Input placeholder="Enter email" />
+            </Modal>
+          </Col>
+        </Row>
+      </div>
+    )
+  } else {
+    return (
+      <div className="layout" ref={targetRef}>
+        {contextHolder}
         <Button
-            className="button-invite"
-            icon={<SendOutlined />}
-            onClick={() => setIsModalOpen(true)}
-          >Invite </Button>
-          <Modal title="Invite your friend to MSK Predict"
-            open={isModalOpen}
-            onOk={() => {
-              setIsModalOpen(false)
-              success()
-            }}
-            onCancel={() => setIsModalOpen(false)}>
-            <Input placeholder="Enter email" />
-          </Modal>
-        </Col>
-      </Row>
-    </div>
-  )
+          className="button-download"
+          title="Download Report"
+          onClick={() => generatePDF(targetRef, { filename: 'MSK Prevent Report and Action Plan.pdf' })}><DownloadOutlined />
+        </Button>
+        <h2>You are not at risk for any cancer</h2>
+        <Row gutter={[16, 24]}>
+          <Col className="gutter-row recommend" span={20}>
+            <h2>General resources</h2>
+            <div>You can take steps to prevent cancer even if you are not at a particularly high risk.</div>
+
+            <h3>Resources</h3>
+            <div className="resource" onClick={() => { window.open("https://www.mskcc.org/cancer-care/patient-education/your-guide-preventing-breast-cancer", "_blank"); }}>What You Can Do to Prevent Breast Cancer</div>
+            <div className="resource" onClick={() => { window.open("https://www.mskcc.org/cancer-care/patient-education/your-guide-preventing-gynecologic", "_blank"); }}>What You Can Do To Prevent Gynecologic Cancer</div>
+            <div className="resource" onClick={() => { window.open("https://www.mskcc.org/cancer-care/risk-assessment-screening/screening", "_blank"); }}>MSK Screening Services</div>
+          </Col>
+        </Row>
+
+        <Row gutter={[16, 24]}>
+          <Col className="gutter-row recommend" span={20}>Recommend MSK Prevent to others
+            <Button
+              className="button-invite"
+              icon={<SendOutlined />}
+              onClick={() => setIsModalOpen(true)}
+            >Invite </Button>
+            <Modal title="Invite your friend to MSK Predict"
+              open={isModalOpen}
+              onOk={() => {
+                setIsModalOpen(false)
+                success()
+              }}
+              onCancel={() => setIsModalOpen(false)}>
+              <Input placeholder="Enter email" />
+            </Modal>
+          </Col>
+        </Row>
+      </div>
+    )
+  }
 };
 
 export default Report;
+
+function sleep(arg0: number) {
+  throw new Error("Function not implemented.");
+}
