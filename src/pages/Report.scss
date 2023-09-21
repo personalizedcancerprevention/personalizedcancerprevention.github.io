@@ -1,22 +1,30 @@
-
 .layout {
   padding: 20px 20px 20px 40px;
 }
 
-.high-risk {
+.high-risk-container {
+  display: flex;
+  align-items: center;
   background: #FFF0E4;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+.high-risk {
   color: #8A3900;
   margin: 0 !important;
-  height: 40px;
+  // height: 40px;
   font-size: 24px;
-  padding: 10px 10px;
+  // padding: 10px 10px;
   font-family: 'Gotham';
   font-style: normal;
 }
 
 .avg-risk {
-  background: #FCF4D6;;
-  color: #684E00;;
+  background: #FCF4D6;
+  ;
+  color: #684E00;
+  ;
   margin: 0 !important;
   height: 40px;
   font-size: 24px;
@@ -26,7 +34,8 @@
 }
 
 .risk {
-  background: #F2F4F8;;
+  background: #F2F4F8;
+  ;
   border-radius: 8px;
   margin: 8px 0px;
   padding: 0px 16px 16px 16px;
@@ -39,17 +48,18 @@
 }
 
 .button-download {
-  float: right;
+  // float: right;
+  margin-left: auto;
   background-color: #F0F5FF;
   border-color: #113E90;
 }
 
 .button-invite {
   direction: rtl;
-  float:right;
+  float: right;
   margin: 0px 20px 0px 0px;
   font-weight: 600;
-  border-color:#113E90;
+  border-color: #113E90;
 }
 
 .resource {
@@ -63,6 +73,7 @@
   padding: 8px;
   margin: 8px 0px;
 }
+
 .resource:hover {
   cursor: pointer;
 }
